@@ -1,0 +1,236 @@
+@@ -0,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Aula Java</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>Contatos</h1>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Cadastro</a></li>
+            <li><a href="#tabs-2">Tabela</a></li>
+
+        </ul>
+        <div id="tabs-1">
+            <form action="#" method="post">
+                <input type="hidden" name="id" id="id" />
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" />
+                <br />
+                <br />
+
+                <label>Sexo:</label>
+                <label for="sexoM">Masculino</label>
+                <input type="radio" name="sexo" id="sexoM" value="M" />
+                <label for="sexoF">Feminino</label>
+                <input type="radio" name="sexo" id="sexoF" value="F" />
+                <br />
+                <br />
+
+                <div id="gravidez" style="display: none">
+                    <label for="gravida">Já esteve grávida?</label>
+                    <input type="checkbox" name="gravida" id="gravida" value="S" />
+                    <br />
+                    <br />
+                </div>
+
+                <label for="cidade">Cidade:</label>
+                <select name="cidade" id="cidade">
+                    <option value="">Selecione</option>
+                    <option value="Fortaleza">Fortaleza</option>
+                    <option value="Joao Pessoa">João Pessoa</option>
+                    <option value="Natal">Natal</option>
+                </select>
+                <br />
+                <br />
+
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" id="cpf" />
+                <br />
+                <br />
+
+                <label for="ativo">Ativo</label>
+                <input type="checkbox" name="ativo" id="ativo" value="S" />
+                <br />
+                <br />
+
+                <label for="descricao">Descrição Pessoal</label>
+                <br />
+                <textarea name="descricao" id="descricao"></textarea>
+                <br />
+                <br />
+
+                <label for="arquivo">Arquivo: </label>
+                <input type="file" name="arquivo" id="arquivo" />
+                <br />
+                <br />
+
+                <input type="button" id="btSalvar" value="Salvar" />
+                <input type="button" id="btLimpar" value="Limpar" />
+
+            </form>
+        </div>
+
+        <div id="tabs-2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sexo</th>
+                        <th>Cidade</th>
+                        <th>CPF</th>
+                        <th>Gravidez</th>
+                        <th>Ativo</th>
+                        <th>Descricao</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_contatos">
+                    <tr id="tr_1">
+                        <td>Maurício</td>
+                        <td>Masculino</td>
+                        <td>L.A</td>
+                        <td>11111111111</td>
+                        <td>Não</td>
+                        <td>Sim</td>
+                        <td>Alto</td>
+                        <td><a class="alteracao" href="Javascript:Void(0)">Alt </a>| <a class="exclusao" href="Javascript:void(0)">EX</a>
+                        </td>
+
+                    </tr>
+                    <tr id="tr_2">
+                        <td>Ana</td>
+                        <td>Feminino</td>
+                        <td>Santos</td>
+                        <td>11111111111</td>
+                        <td>Sim</td>
+                        <td>Nao</td>
+                        <td>Loira</td>
+                        <td><a class="alteracao" href="Javascript:Void(0)">Alt </a>| <a class="exclusao" href="Javascript:Void(0)">EX</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div title="mensagem" id="mensagem" id="dialog"></div>
+
+
+
+</body>
+
+</html>
+
+
+<!-- 
+//Código do professor:    
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aula Java</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		< src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></>
+		< src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></>
+		< type="text/java" src="libs/index.js"></>
+	</head>
+
+	<body>
+		<h1>Contatos</h1>
+
+
+		<div id="tabs">
+		  <ul>
+		    <li><a href="#tabs-cadastro">Cadastro</a></li>
+		    <li><a href="#tabs-lista">Lista</a></li>
+		  </ul>
+		  <div id="tabs-cadastro">
+		  	<form action="#" method="post">
+				<input type="hidden" name="id" id="id" />
+				<label for="nome">Nome</label>
+				<input type="text" name="nome" id="nome" />
+				<br />
+				<br />
+
+				<label>Sexo:</label> 
+				<label for="sexoM">Masculino</label> 
+				<input type="radio" name="sexo" id="sexoM" value="M" />
+				<label for="sexoF">Feminino</label> 
+				<input type="radio" name="sexo" id="sexoF" value="F" />
+				<br />
+				<br />
+
+				<div id="gravidez" style="display: none">
+					<label for="gravida">Já esteve grávida?</label>
+					<input type="checkbox" name="gravida" id="gravida" value="S" />
+					<br />
+					<br />
+				</div>			
+
+				<label for="cidade">Cidade:</label>
+				<select name="cidade" id="cidade">
+					<option value="">Selecione</option>
+					<option value="Fortaleza">Fortaleza</option>
+					<option value="Joao Pessoa">João Pessoa</option>
+					<option value="Natal">Natal</option>
+				</select>
+				<br />
+				<br />
+
+				<label for="cpf">CPF:</label>
+				<input type="number" name="cpf" id="cpf" />
+				<br />
+				<br />
+
+				<label for="ativo">Ativo</label>
+				<input type="checkbox" name="ativo" id="ativo" value="S" />
+				<br />
+				<br />
+
+				<label for="descricao">Descrição Pessoal</label>
+				<br />
+				<textarea name="descricao" id="descricao"></textarea>
+				<br />
+				<br />
+
+				<input type="button" id="btSalvar" value="Salvar" />
+				<input type="button" id="btLimpar" value="Limpar" />
+			</form>
+		  </div>
+		  <div id="tabs-lista">
+		  	<table>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Sexo</th>
+						<th>Cidade</th>
+						<th>CPF</th>
+						<th>Ativo</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody id="tbody_contatos">
+					
+				</tbody>
+			</table>
+		  </div>
+		</div>
+
+		<div id="dialog" title="Mensagem">
+		  <p id="mensagem"></p>
+		</div>
+	</body>
+</html>
+ -->
